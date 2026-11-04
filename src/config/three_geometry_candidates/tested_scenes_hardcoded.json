@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "generated_utc": "2026-05-23T18:03:48Z",
+    "note": "Hard-coded final tested scenes used by the project pipeline."
+  },
+  "tested_scenes": [
+    {
+      "selection_order": 1,
+      "scene_name": "scene-1019",
+      "geometry_case": "straight_approach",
+      "role_in_study": "straight ego-approach pedestrian-crossing case",
+      "downstream_config_filename": "01_straight_scene-1019.json",
+      "refinement_script_hint": "03_refine_scene_1019_straight_same_length_smooth_reaccel.py"
+    },
+    {
+      "selection_order": 2,
+      "scene_name": "scene-0061",
+      "geometry_case": "moderate_curvature_approach",
+      "role_in_study": "moderate/slight curvature ego-approach pedestrian-crossing case",
+      "downstream_config_filename": "02_moderate_curvature_scene-0061.json",
+      "refinement_script_hint": "03_refine_scene_synthetic_0061_only.py"
+    },
+    {
+      "selection_order": 3,
+      "scene_name": "scene-0383",
+      "geometry_case": "high_curvature_or_circular_approach",
+      "role_in_study": "high-curvature/circular ego-approach pedestrian-crossing case",
+      "downstream_config_filename": "03_high_curvature_scene-0383.json",
+      "refinement_script_hint": "03_refine_scene_0383.py"
+    }
+  ]
+}

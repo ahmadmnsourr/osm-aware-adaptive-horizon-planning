@@ -1,0 +1,91 @@
+{
+  "scene_name": "scene-1019",
+  "geometry_learning_profile": {
+    "scene_name": "scene-1019",
+    "profile_used": true,
+    "geometry_case": "straight_approach",
+    "rationale": "Straight approach should gain the most from early OSM/camera uncertainty anticipation, so safety risk receives a stronger target-horizon gain.",
+    "overrides": {
+      "safety_gain_ped_s": 1.3,
+      "conservatism_penalty_ped_s": 0.22,
+      "safety_gain_veh_s": 0.42,
+      "conservatism_penalty_veh_s": 0.12,
+      "ridge_lambda": 0.12,
+      "ped_horizon_max_s": 5.0,
+      "veh_horizon_max_s": 2.8
+    }
+  },
+  "num_training_rows": 975,
+  "mean_target_pedestrian_horizon_s": 4.536145910635118,
+  "mean_predicted_pedestrian_horizon_s": 4.528414564288513,
+  "crossing_proximity_factor_nonzero": true,
+  "normalized_osm_error_varies": true,
+  "has_high_degradation_rows_ge_70_pct": true,
+  "feature_names": [
+    "bias",
+    "degradation_fraction",
+    "normalized_osm_error",
+    "crossing_proximity_factor",
+    "actual_camera_drop_fraction",
+    "is_random_dropout",
+    "is_burst_dropout",
+    "is_distance_based_dropout",
+    "degradation_x_osm_error",
+    "degradation_x_proximity",
+    "osm_error_x_proximity",
+    "drop_fraction_x_proximity"
+  ],
+  "feature_weights": {
+    "pedestrian": {
+      "bias": -2.1806447804494113,
+      "degradation_fraction": 1.1470873855154695,
+      "normalized_osm_error": 3.6933204420187957,
+      "crossing_proximity_factor": 11.252433082369716,
+      "actual_camera_drop_fraction": 0.3000987539658028,
+      "is_random_dropout": 0.021688324545109463,
+      "is_burst_dropout": 0.006178416391350937,
+      "is_distance_based_dropout": -0.07147963653160934,
+      "degradation_x_osm_error": 8.199055651021759,
+      "degradation_x_proximity": -8.744187885005374,
+      "osm_error_x_proximity": -0.7254000108547308,
+      "drop_fraction_x_proximity": -2.4926230135056886
+    },
+    "vehicle": {
+      "bias": -0.3942526037800257,
+      "degradation_fraction": 1.380543366258871,
+      "normalized_osm_error": 0.6658698112899049,
+      "crossing_proximity_factor": -0.4269832618128827,
+      "actual_camera_drop_fraction": -0.5618007393415265,
+      "is_random_dropout": 0.022688602610285522,
+      "is_burst_dropout": -0.05312610506833512,
+      "is_distance_based_dropout": 0.02255245038302464,
+      "degradation_x_osm_error": 0.7035908451809685,
+      "degradation_x_proximity": 1.174898681007968,
+      "osm_error_x_proximity": 0.969875694627751,
+      "drop_fraction_x_proximity": 0.11450253905143827
+    }
+  },
+  "pedestrian_fit": {
+    "num_training_rows": 975,
+    "mae_s": 0.23172910358980603,
+    "rmse_s": 0.4144872664747064,
+    "r2": 0.41402520132455,
+    "target_mean_s": 4.536145910635118,
+    "prediction_mean_s": 4.528414564288513,
+    "target_min_s": 2.9464764943503523,
+    "target_max_s": 5.0
+  },
+  "vehicle_fit": {
+    "num_training_rows": 975,
+    "mae_s": 0.030602201822785086,
+    "rmse_s": 0.03991775345955248,
+    "r2": 0.967771316781124,
+    "target_mean_s": 2.2543556640146543,
+    "prediction_mean_s": 2.256062778931222,
+    "target_min_s": 1.7080835366497538,
+    "target_max_s": 2.777595696502823
+  },
+  "training_source": "data\\planner_osm_aware_rulebased\\scene-1019\\per_run_metrics.csv",
+  "baseline_source_optional": "data\\planner_perception_only\\scene-1019\\per_run_metrics.csv",
+  "output_policy": "data\\learned_horizon_policy\\scene-1019\\adaptive_horizon_policy.json"
+}

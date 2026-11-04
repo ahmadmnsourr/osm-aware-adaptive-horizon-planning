@@ -1,0 +1,116 @@
+{
+  "scene_name": "scene-0383",
+  "calibration_timestamp_utc": "2026-05-24T11:54:23Z",
+  "initial_parameters": {
+    "v0_mps": 6.545987339479991,
+    "s0_m": 2.2,
+    "T_s": 2.3715317343348707,
+    "a_max_mps2": 0.678362784178537,
+    "b_comfort_mps2": 1.1,
+    "delta": 4.0
+  },
+  "final_parameters": {
+    "v0_mps": 7.450897813866223,
+    "s0_m": 1.0678804609917694,
+    "T_s": 2.2958503609909435,
+    "a_max_mps2": 1.187549095046857,
+    "b_comfort_mps2": 1.1078607406735985,
+    "delta": 4.0
+  },
+  "initial_scene_statistics": {
+    "free_flow_speed_samples_count": 22,
+    "free_flow_speed_80th_percentile_mps": 6.545987339479991,
+    "near_stop_gap_samples_count": 0,
+    "near_stop_gap_60th_percentile_m": 2.2,
+    "headway_samples_count": 5,
+    "headway_median_s": 2.3715317343348707,
+    "positive_acc_samples_count": 14,
+    "positive_acc_75th_percentile_mps2": 0.678362784178537,
+    "braking_samples_count": 12,
+    "braking_80th_percentile_mps2": 1.1,
+    "gate_s_progress_m": 24.554498887930492,
+    "gate_source": "scene_summary.ego_hold_line_arc_length_m",
+    "ped_constraint_start_frame": 4,
+    "crossing_start_frame": 7,
+    "crossing_end_frame": 14,
+    "pre_crossing_frame_range": [
+      0,
+      6
+    ],
+    "crossing_frame_range": [
+      7,
+      14
+    ],
+    "post_crossing_frame_range": [
+      16,
+      39
+    ]
+  },
+  "best_fit_summary": {
+    "best_objective": 5.9292068714327195,
+    "best_detail": {
+      "speed_rmse": 1.6307662454044043,
+      "progress_rmse": 6.467192418398312,
+      "accel_rmse": 0.818286866699313,
+      "transition_speed_shape_rmse": 1.585435955478561,
+      "stop_timing_error_frames": 0.0,
+      "restart_timing_error_frames": 1.0,
+      "objective_total": 5.9292068714327195,
+      "observed_stop_frame": null,
+      "simulated_stop_frame": null,
+      "observed_restart_frame": 14,
+      "simulated_restart_frame": 15,
+      "approach_frames_used": [
+        0,
+        8
+      ],
+      "crossing_frames_used": [
+        6,
+        17
+      ],
+      "accel_smoothing_window": 5,
+      "accel_residual_clip_mps2": 3.5
+    },
+    "num_candidates_tested": 3501,
+    "search_stage_counts": {
+      "stage_b1_local": 2450,
+      "stage_b2_refine": 1050
+    },
+    "vehicle_lead_ever_available_during_fit": false,
+    "vehicle_lead_ever_used_in_best_rollout": false
+  },
+  "phase_frames": {
+    "ped_constraint_start_frame": 4,
+    "crossing_start_frame": 7,
+    "crossing_end_frame": 14,
+    "pre_crossing_frame_range": [
+      0,
+      6
+    ],
+    "crossing_frame_range": [
+      7,
+      14
+    ],
+    "post_crossing_frame_range": [
+      16,
+      39
+    ]
+  },
+  "config": {
+    "delta_fixed": 4.0,
+    "num_random_samples": 3500,
+    "seed": 42,
+    "hold_buffer_extra_m": 2.5,
+    "near_stop_speed_threshold_mps": 0.2,
+    "post_crossing_buffer_frames": 2,
+    "pre_crossing_buffer_frames": 3,
+    "objective_weight_speed": 1.0,
+    "objective_weight_progress": 0.45,
+    "objective_weight_accel": 0.3,
+    "objective_weight_stop_timing": 0.45,
+    "objective_weight_restart_timing": 0.35,
+    "objective_weight_transition_speed_shape": 0.5,
+    "objective_accel_smoothing_window": 5,
+    "objective_accel_residual_clip_mps2": 3.5
+  }
+}

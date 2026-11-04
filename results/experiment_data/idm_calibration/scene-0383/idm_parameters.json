@@ -1,0 +1,85 @@
+{
+  "scene_name": "scene-0383",
+  "calibration_timestamp_utc": "2026-05-24T11:54:23Z",
+  "parameter_source": "scene_0383_interactive_crossing_calibration",
+  "parameter_notes": [
+    "Parameters were estimated from the refined scene-0383 package using robust trajectory-statistic initialization followed by two-stage bounded local search.",
+    "Scene-0383 preserves the original ego trajectory while two synthetic pedestrians cross during ego approach; calibration fits conservative yield/restart timing while avoiding frozen-stop behavior.",
+    "This parameter set is intended to be shared by both the perception-only and OSM-aware planners.",
+    "IDM delta was kept fixed during calibration."
+  ],
+  "fitted_parameters": {
+    "v0_mps": 7.450897813866223,
+    "s0_m": 1.0678804609917694,
+    "T_s": 2.2958503609909435,
+    "a_max_mps2": 1.187549095046857,
+    "b_comfort_mps2": 1.1078607406735985,
+    "delta": 4.0
+  },
+  "fixed_parameters": {
+    "delta": 4.0
+  },
+  "bounds": {
+    "v0_mps": [
+      2.5,
+      9.0
+    ],
+    "s0_m": [
+      1.0,
+      8.0
+    ],
+    "T_s": [
+      1.0,
+      3.5
+    ],
+    "a_max_mps2": [
+      0.35,
+      2.0
+    ],
+    "b_comfort_mps2": [
+      0.7,
+      3.8
+    ],
+    "delta": [
+      4.0,
+      4.0
+    ]
+  },
+  "method": {
+    "stage_a": "scene-statistic initialization",
+    "stage_b1": "local random search around initialization",
+    "stage_b2": "local refinement around current best",
+    "num_random_samples": 3500,
+    "seed": 42
+  },
+  "fit_objective": {
+    "speed_rmse": 1.6307662454044043,
+    "progress_rmse": 6.467192418398312,
+    "accel_rmse": 0.818286866699313,
+    "transition_speed_shape_rmse": 1.585435955478561,
+    "stop_timing_error_frames": 0.0,
+    "restart_timing_error_frames": 1.0,
+    "objective_total": 5.9292068714327195,
+    "observed_stop_frame": null,
+    "simulated_stop_frame": null,
+    "observed_restart_frame": 14,
+    "simulated_restart_frame": 15,
+    "approach_frames_used": [
+      0,
+      8
+    ],
+    "crossing_frames_used": [
+      6,
+      17
+    ],
+    "accel_smoothing_window": 5,
+    "accel_residual_clip_mps2": 3.5
+  },
+  "virtual_gate": {
+    "gate_s_progress_m": 24.554498887930492,
+    "gate_source": "scene_summary.ego_hold_line_arc_length_m",
+    "ped_constraint_start_frame": 4,
+    "crossing_start_frame": 7,
+    "crossing_end_frame": 14
+  }
+}

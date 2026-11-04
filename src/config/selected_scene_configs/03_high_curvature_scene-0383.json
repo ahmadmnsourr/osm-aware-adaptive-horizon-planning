@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "generated_utc": "2026-05-23T18:03:48Z",
+    "selection_role": "high-curvature/circular ego-approach pedestrian-crossing case",
+    "nuscenes_version": "v1.0-trainval",
+    "resolved_dataroot": "",
+    "geometry_case": "high_curvature_or_circular_approach",
+    "source_selector_script": "01_find_candidate_scenes_three_geometries_0383.py",
+    "note": "Compatible with downstream extraction scripts expecting metadata + best_candidate.",
+    "hardcoded_tested_scene": true,
+    "project_tested_scenes": [
+      "scene-1019",
+      "scene-0061",
+      "scene-0383"
+    ]
+  },
+  "best_candidate": {
+    "scene_name": "scene-0383",
+    "scene_token": "e0a22086a94f48e5bbd4c4e7916b2106",
+    "dataset_version": "v1.0-trainval",
+    "resolved_dataroot": "",
+    "location": "singapore-onenorth",
+    "scene_description": "Peds sitting, turn left, parked bicycle, jaywalker",
+    "nbr_samples": 40,
+    "first_sample_token": "d492065ca3894a65846e581d695426a0",
+    "last_sample_token": "d2746214731b4c25976e9c41afc1783d",
+    "found_in_dataset": true,
+    "passed_current_filters": false,
+    "filter_note": "Scene was found in the nuScenes tables but did not pass the current candidate filters. It is still kept because it is hard-coded as a final tested scene.",
+    "geometry_case_candidate": "high_curvature_or_circular_approach",
+    "geometry_case_hardcoded": "high_curvature_or_circular_approach",
+    "hardcoded_tested_scene": true,
+    "selection_order": 3,
+    "selection_role": "high-curvature/circular ego-approach pedestrian-crossing case",
+    "downstream_config_filename": "03_high_curvature_scene-0383.json",
+    "refinement_script_hint": "03_refine_scene_0383.py"
+  }
+}

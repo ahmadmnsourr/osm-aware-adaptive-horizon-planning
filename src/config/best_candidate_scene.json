@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "nuscenes_dataroot_env": null,
+    "nuscenes_version": "v1.0-mini",
+    "pipeline_config": null,
+    "candidate_scenes_json": "config/candidate_scenes.json",
+    "best_candidate_json": "config/best_candidate_scene.json",
+    "output_json": "/Users/ahmadmansour/Desktop/CAV/Final Project/CAV-FP/src/config/candidate_scenes.json",
+    "lidar_channel": "LIDAR_TOP",
+    "thresholds": {
+      "MIN_EGO_TOTAL_DISTANCE_M": 30.0,
+      "MIN_EGO_AVG_STEP_DISTANCE_M": 0.8,
+      "MAX_EGO_PED_DISTANCE_M": 15.0,
+      "MIN_PED_FRAMES": 5,
+      "MAX_PED_TO_EGO_PATH_M": 5.0
+    },
+    "score_weights": {
+      "SCORE_WEIGHT_EGO_MOVEMENT": 1.5,
+      "SCORE_WEIGHT_RELEVANT_PED_COUNT": 20.0,
+      "SCORE_WEIGHT_CLOSEST_APPROACH": 12.0,
+      "SCORE_WEIGHT_SUSTAINED_FRAMES": 3.0,
+      "SCORE_EGO_DISTANCE_REF_M": 100.0
+    },
+    "resolved_dataroot": "/Users/ahmadmansour/Desktop/CAV/Final Project/CAV-FP/src",
+    "total_candidates_passed": 2
+  },
+  "best_candidate": {
+    "scene_name": "scene-0061",
+    "scene_token": "cc8c0bf57f984915a77078b10eb33198",
+    "nbr_samples": 39,
+    "ego_total_distance_m": 91.302,
+    "ego_avg_step_distance_m": 2.4027,
+    "num_pedestrian_instances": 60,
+    "num_relevant_pedestrians": 4,
+    "min_ego_ped_distance_m": 2.423,
+    "score": 220.431
+  }
+}

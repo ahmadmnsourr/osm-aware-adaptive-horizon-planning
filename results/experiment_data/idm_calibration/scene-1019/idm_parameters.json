@@ -1,0 +1,92 @@
+{
+  "scene_name": "scene-1019",
+  "calibration_timestamp_utc": "2026-05-23T18:36:23Z",
+  "parameter_source": "scene_1019_straight_approach_calibration",
+  "parameter_notes": [
+    "Parameters were estimated from the refined straight-approach scene using robust trajectory-statistic initialization followed by two-stage bounded local search.",
+    "Scene-1019 objective down-weights the final synthetic endpoint catch-up frames so the fitted IDM parameters stay physically realistic.",
+    "This parameter set is intended to be shared by both the perception-only and OSM-aware planners.",
+    "IDM delta was kept fixed during calibration."
+  ],
+  "fitted_parameters": {
+    "v0_mps": 5.126085258911832,
+    "s0_m": 1.0084262868438616,
+    "T_s": 1.3350412291412184,
+    "a_max_mps2": 1.8632751373618104,
+    "b_comfort_mps2": 1.4609383777118614,
+    "delta": 4.0
+  },
+  "fixed_parameters": {
+    "delta": 4.0
+  },
+  "bounds": {
+    "v0_mps": [
+      3.0,
+      10.5
+    ],
+    "s0_m": [
+      1.0,
+      8.0
+    ],
+    "T_s": [
+      0.8,
+      3.2
+    ],
+    "a_max_mps2": [
+      0.35,
+      2.2
+    ],
+    "b_comfort_mps2": [
+      0.6,
+      3.8
+    ],
+    "delta": [
+      4.0,
+      4.0
+    ]
+  },
+  "method": {
+    "stage_a": "scene-statistic initialization",
+    "stage_b1": "local random search around initialization",
+    "stage_b2": "local refinement around current best",
+    "num_random_samples": 4000,
+    "seed": 42
+  },
+  "fit_objective": {
+    "speed_rmse": 1.7869799638312647,
+    "progress_rmse": 4.294946860358365,
+    "accel_rmse": 2.237405464898169,
+    "transition_speed_shape_rmse": 2.9733323140962584,
+    "stop_timing_error_frames": 2.0,
+    "restart_timing_error_frames": 0.0,
+    "objective_total": 7.350275729918493,
+    "observed_stop_frame": 29,
+    "simulated_stop_frame": 27,
+    "observed_restart_frame": 34,
+    "simulated_restart_frame": 34,
+    "approach_frames_used": [
+      21,
+      30
+    ],
+    "crossing_frames_used": [
+      28,
+      36
+    ],
+    "accel_smoothing_window": 5,
+    "accel_residual_clip_mps2": 3.5,
+    "scene1019_tail_downweighted_frames": [
+      36,
+      37,
+      38,
+      39
+    ],
+    "scene1019_observed_speed_cap_mps": 10.0
+  },
+  "virtual_gate": {
+    "gate_s_progress_m": 58.66942106279218,
+    "gate_source": "scene_summary.ego_hold_line_arc_length_m",
+    "ped_constraint_start_frame": 26,
+    "crossing_start_frame": 29,
+    "crossing_end_frame": 33
+  }
+}

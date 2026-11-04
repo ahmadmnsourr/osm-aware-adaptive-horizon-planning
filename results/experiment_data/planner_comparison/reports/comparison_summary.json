@@ -1,0 +1,325 @@
+{
+  "output_root": "data\\planner_comparison_paper",
+  "focus_mode_requested": "burst_dropout",
+  "osm_error_axis": "signed",
+  "figure_index": [
+    {
+      "figure_type": "main_result_three_panel_heatmap",
+      "scene_name": "scene-1019",
+      "geometry_type": "Straight approach",
+      "file": "data\\planner_comparison_paper\\plots\\main\\01_scene-1019_straight_approach_horizon_safety_performance_heatmap.png",
+      "status": "created",
+      "focus_mode_used": "burst_dropout",
+      "safety_metric_used": "min_ped_ttc_s",
+      "performance_metric_used": "effective_travel_time_s",
+      "travel_time_metric_is_fixed_horizon": true
+    },
+    {
+      "figure_type": "main_result_three_panel_heatmap",
+      "scene_name": "scene-0061",
+      "geometry_type": "Moderate-curvature approach",
+      "file": "data\\planner_comparison_paper\\plots\\main\\02_scene-0061_moderate_curvature_horizon_safety_performance_heatmap.png",
+      "status": "created",
+      "focus_mode_used": "burst_dropout",
+      "safety_metric_used": "min_ped_ttc_s",
+      "performance_metric_used": "effective_travel_time_s",
+      "travel_time_metric_is_fixed_horizon": true
+    },
+    {
+      "figure_type": "main_result_three_panel_heatmap",
+      "scene_name": "scene-0383",
+      "geometry_type": "High-curvature / circular approach",
+      "file": "data\\planner_comparison_paper\\plots\\main\\03_scene-0383_high_curvature_circular_horizon_safety_performance_heatmap.png",
+      "status": "created",
+      "focus_mode_used": "burst_dropout",
+      "safety_metric_used": "min_ped_ttc_s",
+      "performance_metric_used": "effective_travel_time_s",
+      "travel_time_metric_is_fixed_horizon": false
+    },
+    {
+      "figure_type": "main_result_horizon_bar_points_across_geometries",
+      "scene_name": "all",
+      "geometry_type": "all geometries",
+      "file": "data\\planner_comparison_paper\\plots\\main\\05_horizon_bar_points_across_geometries.png",
+      "status": "created",
+      "focus_mode_used": "all modes",
+      "safety_metric_used": "n/a",
+      "performance_metric_used": "n/a"
+    },
+    {
+      "figure_type": "main_result_planner_robustness_by_degradation_seed_points",
+      "scene_name": "all",
+      "geometry_type": "all geometries",
+      "file": "data\\planner_comparison_paper\\plots\\main\\06_planner_robustness_by_degradation.png",
+      "status": "created",
+      "focus_mode_used": "all modes",
+      "safety_metric_used": "min_ped_ttc_s",
+      "performance_metric_used": "n/a"
+    }
+  ],
+  "osm_error_case_plot_copy_status": [
+    {
+      "scene_name": "scene-1019",
+      "geometry_type": "Straight approach",
+      "source_file": "data\\osm\\scene-1019\\error_cases\\osm_error_cases_visualization_zoomed.png",
+      "copied_file": "data\\planner_comparison_paper\\plots\\osm_error_cases\\01_straight_approach_osm_error_cases.png",
+      "status": "copied"
+    },
+    {
+      "scene_name": "scene-0061",
+      "geometry_type": "Moderate-curvature approach",
+      "source_file": "data\\osm\\scene-0061\\error_cases\\osm_error_cases_visualization_zoomed.png",
+      "copied_file": "data\\planner_comparison_paper\\plots\\osm_error_cases\\02_moderate_curvature_osm_error_cases.png",
+      "status": "copied"
+    },
+    {
+      "scene_name": "scene-0383",
+      "geometry_type": "High-curvature / circular approach",
+      "source_file": "data\\osm\\scene-0383\\error_cases\\osm_error_cases_visualization_zoomed.png",
+      "copied_file": "data\\planner_comparison_paper\\plots\\osm_error_cases\\03_high_curvature_circular_osm_error_cases.png",
+      "status": "copied"
+    }
+  ],
+  "geometry_summary": [
+    {
+      "geometry_order": 1,
+      "geometry_type": "Straight approach",
+      "scene_name": "scene-1019",
+      "num_osm_runs": 975,
+      "mean_adaptive_ped_horizon_s": 4.496799180133998,
+      "scene_has_weak_safety_stress_test": false,
+      "unsafe_frames_total_mean_baseline": 19.906666666666666,
+      "unsafe_frames_total_mean_osm": 20.364102564102563,
+      "unsafe_frames_total_mean_improvement_abs": -0.4574358974358974,
+      "unsafe_frames_total_mean_improvement_pct": -3.911750953712187,
+      "unsafe_frames_total_help_rate_pct": 31.28205128205128,
+      "min_ped_ttc_s_mean_baseline": 1.1793990122317282,
+      "min_ped_ttc_s_mean_osm": 1.792788717640887,
+      "min_ped_ttc_s_mean_improvement_abs": 0.6133897054091589,
+      "min_ped_ttc_s_mean_improvement_pct": 174.13986621758298,
+      "min_ped_ttc_s_help_rate_pct": 84.0,
+      "travel_time_s_mean_baseline": 20.149320999999993,
+      "travel_time_s_mean_osm": 20.149320999999993,
+      "travel_time_s_mean_improvement_abs": 0.0,
+      "travel_time_s_mean_improvement_pct": 0.0,
+      "travel_time_s_help_rate_pct": 0.0,
+      "stop_time_s_mean_baseline": 4.958543133333333,
+      "stop_time_s_mean_osm": 5.19694625846154,
+      "stop_time_s_mean_improvement_abs": -0.2384031251282051,
+      "stop_time_s_mean_improvement_pct": -26.0262984616317,
+      "stop_time_s_help_rate_pct": 26.564102564102566,
+      "comfort_jerk_rms_mps3_mean_baseline": 5.018570739861009,
+      "comfort_jerk_rms_mps3_mean_osm": 5.781073245308483,
+      "comfort_jerk_rms_mps3_mean_improvement_abs": -0.7625025054474743,
+      "comfort_jerk_rms_mps3_mean_improvement_pct": -19.441357130625768,
+      "comfort_jerk_rms_mps3_help_rate_pct": 17.23076923076923
+    },
+    {
+      "geometry_order": 2,
+      "geometry_type": "Moderate-curvature approach",
+      "scene_name": "scene-0061",
+      "num_osm_runs": 975,
+      "mean_adaptive_ped_horizon_s": 3.8977942319118477,
+      "scene_has_weak_safety_stress_test": false,
+      "unsafe_frames_total_mean_baseline": 3.8933333333333335,
+      "unsafe_frames_total_mean_osm": 2.7435897435897436,
+      "unsafe_frames_total_mean_improvement_abs": 1.1497435897435897,
+      "unsafe_frames_total_mean_improvement_pct": 32.45713776963777,
+      "unsafe_frames_total_help_rate_pct": 56.1025641025641,
+      "min_ped_ttc_s_mean_baseline": 0.9567951480120472,
+      "min_ped_ttc_s_mean_osm": 1.4135605024380908,
+      "min_ped_ttc_s_mean_improvement_abs": 0.4674450306876883,
+      "min_ped_ttc_s_mean_improvement_pct": 150.322358034655,
+      "min_ped_ttc_s_help_rate_pct": 61.128205128205124,
+      "travel_time_s_mean_baseline": 18.872126733333335,
+      "travel_time_s_mean_osm": 19.182964002051285,
+      "travel_time_s_mean_improvement_abs": -0.310837268717949,
+      "travel_time_s_mean_improvement_pct": -2.053826616989949,
+      "travel_time_s_help_rate_pct": 0.0,
+      "stop_time_s_mean_baseline": 3.976918453333333,
+      "stop_time_s_mean_osm": 3.761022243076923,
+      "stop_time_s_mean_improvement_abs": 0.21589621025641023,
+      "stop_time_s_mean_improvement_pct": 6.905462388661827,
+      "stop_time_s_help_rate_pct": 48.41025641025641,
+      "comfort_jerk_rms_mps3_mean_baseline": 6.795518887576572,
+      "comfort_jerk_rms_mps3_mean_osm": 6.849431119773404,
+      "comfort_jerk_rms_mps3_mean_improvement_abs": -0.05391223219683203,
+      "comfort_jerk_rms_mps3_mean_improvement_pct": -2.732348121726844,
+      "comfort_jerk_rms_mps3_help_rate_pct": 57.230769230769226
+    },
+    {
+      "geometry_order": 3,
+      "geometry_type": "High-curvature / circular approach",
+      "scene_name": "scene-0383",
+      "num_osm_runs": 975,
+      "mean_adaptive_ped_horizon_s": 4.0242839047088115,
+      "scene_has_weak_safety_stress_test": false,
+      "unsafe_frames_total_mean_baseline": 5.333333333333333,
+      "unsafe_frames_total_mean_osm": 2.171282051282051,
+      "unsafe_frames_total_mean_improvement_abs": 3.162051282051282,
+      "unsafe_frames_total_mean_improvement_pct": 53.68791208791208,
+      "unsafe_frames_total_help_rate_pct": 88.61538461538461,
+      "min_ped_ttc_s_mean_baseline": 0.31140447886518974,
+      "min_ped_ttc_s_mean_osm": 1.8398224939411367,
+      "min_ped_ttc_s_mean_improvement_abs": 1.5619064891492067,
+      "min_ped_ttc_s_mean_improvement_pct": 577.3491713400762,
+      "min_ped_ttc_s_help_rate_pct": 89.74358974358975,
+      "travel_time_s_mean_baseline": 17.3396684,
+      "travel_time_s_mean_osm": 19.28553166358975,
+      "travel_time_s_mean_improvement_abs": -1.9458632635897433,
+      "travel_time_s_mean_improvement_pct": -12.90261745679471,
+      "travel_time_s_help_rate_pct": 11.076923076923077,
+      "stop_time_s_mean_baseline": 0.8467385733333334,
+      "stop_time_s_mean_osm": 0.4837634317948718,
+      "stop_time_s_mean_improvement_abs": 0.36297514153846155,
+      "stop_time_s_mean_improvement_pct": 64.03841897997175,
+      "stop_time_s_help_rate_pct": 45.53846153846154,
+      "comfort_jerk_rms_mps3_mean_baseline": 3.412632684274432,
+      "comfort_jerk_rms_mps3_mean_osm": 2.9781698338854645,
+      "comfort_jerk_rms_mps3_mean_improvement_abs": 0.4344628503889677,
+      "comfort_jerk_rms_mps3_mean_improvement_pct": -157.96685386538888,
+      "comfort_jerk_rms_mps3_help_rate_pct": 76.51282051282051
+    }
+  ],
+  "uncertainty_horizon_summary": [
+    {
+      "geometry_order": 1,
+      "geometry_type": "Straight approach",
+      "uncertainty_bin": "Low",
+      "mean_adaptive_ped_horizon_s": 2.967277899598508,
+      "std_adaptive_ped_horizon_s": 0.6870461036312654,
+      "mean_combined_uncertainty": 0.21875143773199854,
+      "num_runs": 135,
+      "uncertainty_bin_order": 1
+    },
+    {
+      "geometry_order": 1,
+      "geometry_type": "Straight approach",
+      "uncertainty_bin": "Medium",
+      "mean_adaptive_ped_horizon_s": 4.553531910127051,
+      "std_adaptive_ped_horizon_s": 0.6269827607854075,
+      "mean_combined_uncertainty": 0.53125,
+      "num_runs": 480,
+      "uncertainty_bin_order": 2
+    },
+    {
+      "geometry_order": 1,
+      "geometry_type": "Straight approach",
+      "uncertainty_bin": "High",
+      "mean_adaptive_ped_horizon_s": 4.994726020344068,
+      "std_adaptive_ped_horizon_s": 0.009408089633838672,
+      "mean_combined_uncertainty": 0.8242182108505005,
+      "num_runs": 360,
+      "uncertainty_bin_order": 3
+    },
+    {
+      "geometry_order": 2,
+      "geometry_type": "Moderate-curvature approach",
+      "uncertainty_bin": "Low",
+      "mean_adaptive_ped_horizon_s": 2.948228492165231,
+      "std_adaptive_ped_horizon_s": 0.24932441578259282,
+      "mean_combined_uncertainty": 0.228256379145099,
+      "num_runs": 135,
+      "uncertainty_bin_order": 1
+    },
+    {
+      "geometry_order": 2,
+      "geometry_type": "Moderate-curvature approach",
+      "uncertainty_bin": "Medium",
+      "mean_adaptive_ped_horizon_s": 3.7662710277081306,
+      "std_adaptive_ped_horizon_s": 0.3173973931458296,
+      "mean_combined_uncertainty": 0.5353100261383243,
+      "num_runs": 495,
+      "uncertainty_bin_order": 2
+    },
+    {
+      "geometry_order": 2,
+      "geometry_type": "Moderate-curvature approach",
+      "uncertainty_bin": "High",
+      "mean_adaptive_ped_horizon_s": 4.4580706404528145,
+      "std_adaptive_ped_horizon_s": 0.15323083183910174,
+      "mean_combined_uncertainty": 0.8274113793534525,
+      "num_runs": 345,
+      "uncertainty_bin_order": 3
+    },
+    {
+      "geometry_order": 3,
+      "geometry_type": "High-curvature / circular approach",
+      "uncertainty_bin": "Low",
+      "mean_adaptive_ped_horizon_s": 3.2734119272773814,
+      "std_adaptive_ped_horizon_s": 0.17275961213148064,
+      "mean_combined_uncertainty": 0.21666666666666673,
+      "num_runs": 135,
+      "uncertainty_bin_order": 1
+    },
+    {
+      "geometry_order": 3,
+      "geometry_type": "High-curvature / circular approach",
+      "uncertainty_bin": "Medium",
+      "mean_adaptive_ped_horizon_s": 3.8971207049062495,
+      "std_adaptive_ped_horizon_s": 0.23504631017583882,
+      "mean_combined_uncertainty": 0.53125,
+      "num_runs": 480,
+      "uncertainty_bin_order": 2
+    },
+    {
+      "geometry_order": 3,
+      "geometry_type": "High-curvature / circular approach",
+      "uncertainty_bin": "High",
+      "mean_adaptive_ped_horizon_s": 4.475411829315681,
+      "std_adaptive_ped_horizon_s": 0.147181342133683,
+      "mean_combined_uncertainty": 0.825,
+      "num_runs": 360,
+      "uncertainty_bin_order": 3
+    }
+  ],
+  "learned_policy_summary": [
+    {
+      "scene_name": "scene-1019",
+      "geometry_type": "Straight approach",
+      "policy_file": "data\\learned_horizon_policy\\scene-1019\\adaptive_horizon_policy.json",
+      "policy_found": true,
+      "policy_type": "bounded_logistic_linear",
+      "policy_name": "learned_uncertainty_conditioned_horizon_policy",
+      "pedestrian_mae_s": 0.23172910358980603,
+      "vehicle_mae_s": 0.030602201822785086
+    },
+    {
+      "scene_name": "scene-0061",
+      "geometry_type": "Moderate-curvature approach",
+      "policy_file": "data\\learned_horizon_policy\\scene-0061\\adaptive_horizon_policy.json",
+      "policy_found": true,
+      "policy_type": "bounded_logistic_linear",
+      "policy_name": "learned_uncertainty_conditioned_horizon_policy",
+      "pedestrian_mae_s": 0.13776418524919026,
+      "vehicle_mae_s": 0.0507485545843986
+    },
+    {
+      "scene_name": "scene-0383",
+      "geometry_type": "High-curvature / circular approach",
+      "policy_file": "data\\learned_horizon_policy\\scene-0383\\adaptive_horizon_policy.json",
+      "policy_found": true,
+      "policy_type": "bounded_logistic_linear",
+      "policy_name": "learned_uncertainty_conditioned_horizon_policy",
+      "pedestrian_mae_s": 0.14410715728830292,
+      "vehicle_mae_s": 0.11161619221516222
+    }
+  ],
+  "safety_stress_test_warnings": [
+    {
+      "scene_name": "scene-1019",
+      "geometry_type": "Straight approach",
+      "scene_has_weak_safety_stress_test": false
+    },
+    {
+      "scene_name": "scene-0061",
+      "geometry_type": "Moderate-curvature approach",
+      "scene_has_weak_safety_stress_test": false
+    },
+    {
+      "scene_name": "scene-0383",
+      "geometry_type": "High-curvature / circular approach",
+      "scene_has_weak_safety_stress_test": false
+    }
+  ]
+}

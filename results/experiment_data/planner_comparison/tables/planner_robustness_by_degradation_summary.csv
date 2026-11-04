@@ -1,0 +1,31 @@
+scene_name,geometry_type,geometry_order,degradation_level_pct,planner,mean_safety,std_safety,num_seeds,safety_metric_used
+scene-1019,Straight approach,1,10,OSM-aware learned-horizon,2.4063043269575473,0.03183423689664038,5,min_ped_ttc_s
+scene-1019,Straight approach,1,10,Perception-only baseline,1.5801023660460503,0.3633253410588367,5,min_ped_ttc_s
+scene-1019,Straight approach,1,30,OSM-aware learned-horizon,2.538590031654563,0.22667552129526425,5,min_ped_ttc_s
+scene-1019,Straight approach,1,30,Perception-only baseline,1.3996988557050076,0.43736745564248963,5,min_ped_ttc_s
+scene-1019,Straight approach,1,50,OSM-aware learned-horizon,1.555605617161027,0.4524871033235815,5,min_ped_ttc_s
+scene-1019,Straight approach,1,50,Perception-only baseline,0.7814621504426845,0.25567089386824,5,min_ped_ttc_s
+scene-1019,Straight approach,1,70,OSM-aware learned-horizon,1.1685731170277336,0.21130176966223446,5,min_ped_ttc_s
+scene-1019,Straight approach,1,70,Perception-only baseline,0.9615507944100303,0.48064613531987105,5,min_ped_ttc_s
+scene-1019,Straight approach,1,90,OSM-aware learned-horizon,1.2948704954035626,0.4111805316651258,5,min_ped_ttc_s
+scene-1019,Straight approach,1,90,Perception-only baseline,1.1741808945548668,0.5826954925994773,5,min_ped_ttc_s
+scene-0061,Moderate-curvature approach,2,10,OSM-aware learned-horizon,1.8883135874968056,0.18775834842860034,5,min_ped_ttc_s
+scene-0061,Moderate-curvature approach,2,10,Perception-only baseline,1.1286604565814504,0.030261822528142125,5,min_ped_ttc_s
+scene-0061,Moderate-curvature approach,2,30,OSM-aware learned-horizon,1.5462476331545028,0.43600597949536724,5,min_ped_ttc_s
+scene-0061,Moderate-curvature approach,2,30,Perception-only baseline,0.8948266141308558,0.43934724727844926,5,min_ped_ttc_s
+scene-0061,Moderate-curvature approach,2,50,OSM-aware learned-horizon,1.1103376550924757,0.6420902701828256,5,min_ped_ttc_s
+scene-0061,Moderate-curvature approach,2,50,Perception-only baseline,0.7039304118963072,0.573920183364587,5,min_ped_ttc_s
+scene-0061,Moderate-curvature approach,2,70,OSM-aware learned-horizon,1.1024988681005445,0.40272127917905554,5,min_ped_ttc_s
+scene-0061,Moderate-curvature approach,2,70,Perception-only baseline,0.9253747315393206,0.3785793730761492,5,min_ped_ttc_s
+scene-0061,Moderate-curvature approach,2,90,OSM-aware learned-horizon,1.4204047683461263,0.483575057321025,5,min_ped_ttc_s
+scene-0061,Moderate-curvature approach,2,90,Perception-only baseline,1.1674887061741426,0.3799024628728026,5,min_ped_ttc_s
+scene-0383,High-curvature / circular approach,3,10,OSM-aware learned-horizon,2.280472016763261,0.1620507379637286,5,min_ped_ttc_s
+scene-0383,High-curvature / circular approach,3,10,Perception-only baseline,0.37461025610076193,0.0347838823368775,5,min_ped_ttc_s
+scene-0383,High-curvature / circular approach,3,30,OSM-aware learned-horizon,1.9846760142282107,0.3454988915648857,5,min_ped_ttc_s
+scene-0383,High-curvature / circular approach,3,30,Perception-only baseline,0.32001185995159603,0.06368609798579124,5,min_ped_ttc_s
+scene-0383,High-curvature / circular approach,3,50,OSM-aware learned-horizon,1.7779129555565305,0.17792736507299206,5,min_ped_ttc_s
+scene-0383,High-curvature / circular approach,3,50,Perception-only baseline,0.2935247713977295,0.09161389514050573,5,min_ped_ttc_s
+scene-0383,High-curvature / circular approach,3,70,OSM-aware learned-horizon,1.5529381846648616,0.37488130878975795,5,min_ped_ttc_s
+scene-0383,High-curvature / circular approach,3,70,Perception-only baseline,0.277306632861798,0.10748700510492237,5,min_ped_ttc_s
+scene-0383,High-curvature / circular approach,3,90,OSM-aware learned-horizon,1.5551718358693871,0.2879291615721931,5,min_ped_ttc_s
+scene-0383,High-curvature / circular approach,3,90,Perception-only baseline,0.2833505067182097,0.10826291155827818,5,min_ped_ttc_s

@@ -1,0 +1,123 @@
+{
+  "scene_name": "scene-1019",
+  "calibration_timestamp_utc": "2026-05-23T18:36:23Z",
+  "initial_parameters": {
+    "v0_mps": 7.360041093832422,
+    "s0_m": 1.35,
+    "T_s": 0.8301195792405903,
+    "a_max_mps2": 2.2,
+    "b_comfort_mps2": 1.5672266045180587,
+    "delta": 4.0
+  },
+  "final_parameters": {
+    "v0_mps": 5.126085258911832,
+    "s0_m": 1.0084262868438616,
+    "T_s": 1.3350412291412184,
+    "a_max_mps2": 1.8632751373618104,
+    "b_comfort_mps2": 1.4609383777118614,
+    "delta": 4.0
+  },
+  "initial_scene_statistics": {
+    "free_flow_speed_samples_count": 14,
+    "free_flow_speed_80th_percentile_mps": 7.360041093832422,
+    "near_stop_gap_samples_count": 6,
+    "near_stop_gap_60th_percentile_m": 1.35,
+    "headway_samples_count": 4,
+    "headway_median_s": 0.8301195792405903,
+    "positive_acc_samples_count": 1,
+    "positive_acc_75th_percentile_mps2": 2.2,
+    "braking_samples_count": 7,
+    "braking_80th_percentile_mps2": 1.5672266045180587,
+    "gate_s_progress_m": 58.66942106279218,
+    "gate_source": "scene_summary.ego_hold_line_arc_length_m",
+    "ped_constraint_start_frame": 26,
+    "crossing_start_frame": 29,
+    "crossing_end_frame": 33,
+    "pre_crossing_frame_range": [
+      21,
+      28
+    ],
+    "crossing_frame_range": [
+      29,
+      33
+    ],
+    "post_crossing_frame_range": [
+      35,
+      39
+    ]
+  },
+  "best_fit_summary": {
+    "best_objective": 7.350275729918493,
+    "best_detail": {
+      "speed_rmse": 1.7869799638312647,
+      "progress_rmse": 4.294946860358365,
+      "accel_rmse": 2.237405464898169,
+      "transition_speed_shape_rmse": 2.9733323140962584,
+      "stop_timing_error_frames": 2.0,
+      "restart_timing_error_frames": 0.0,
+      "objective_total": 7.350275729918493,
+      "observed_stop_frame": 29,
+      "simulated_stop_frame": 27,
+      "observed_restart_frame": 34,
+      "simulated_restart_frame": 34,
+      "approach_frames_used": [
+        21,
+        30
+      ],
+      "crossing_frames_used": [
+        28,
+        36
+      ],
+      "accel_smoothing_window": 5,
+      "accel_residual_clip_mps2": 3.5,
+      "scene1019_tail_downweighted_frames": [
+        36,
+        37,
+        38,
+        39
+      ],
+      "scene1019_observed_speed_cap_mps": 10.0
+    },
+    "num_candidates_tested": 4001,
+    "search_stage_counts": {
+      "stage_b1_local": 2800,
+      "stage_b2_refine": 1200
+    },
+    "vehicle_lead_ever_available_during_fit": true,
+    "vehicle_lead_ever_used_in_best_rollout": false
+  },
+  "phase_frames": {
+    "ped_constraint_start_frame": 26,
+    "crossing_start_frame": 29,
+    "crossing_end_frame": 33,
+    "pre_crossing_frame_range": [
+      21,
+      28
+    ],
+    "crossing_frame_range": [
+      29,
+      33
+    ],
+    "post_crossing_frame_range": [
+      35,
+      39
+    ]
+  },
+  "config": {
+    "delta_fixed": 4.0,
+    "num_random_samples": 4000,
+    "seed": 42,
+    "hold_buffer_extra_m": 3.0,
+    "near_stop_speed_threshold_mps": 0.25,
+    "post_crossing_buffer_frames": 2,
+    "pre_crossing_buffer_frames": 2,
+    "objective_weight_speed": 1.15,
+    "objective_weight_progress": 0.35,
+    "objective_weight_accel": 0.25,
+    "objective_weight_stop_timing": 0.65,
+    "objective_weight_restart_timing": 0.55,
+    "objective_weight_transition_speed_shape": 0.65,
+    "objective_accel_smoothing_window": 5,
+    "objective_accel_residual_clip_mps2": 3.5
+  }
+}

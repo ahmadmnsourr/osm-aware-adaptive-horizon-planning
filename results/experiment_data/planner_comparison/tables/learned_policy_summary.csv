@@ -1,0 +1,4 @@
+scene_name,geometry_type,policy_file,policy_found,policy_type,policy_name,pedestrian_mae_s,vehicle_mae_s
+scene-1019,Straight approach,data\learned_horizon_policy\scene-1019\adaptive_horizon_policy.json,True,bounded_logistic_linear,learned_uncertainty_conditioned_horizon_policy,0.23172910358980603,0.030602201822785086
+scene-0061,Moderate-curvature approach,data\learned_horizon_policy\scene-0061\adaptive_horizon_policy.json,True,bounded_logistic_linear,learned_uncertainty_conditioned_horizon_policy,0.13776418524919026,0.0507485545843986
+scene-0383,High-curvature / circular approach,data\learned_horizon_policy\scene-0383\adaptive_horizon_policy.json,True,bounded_logistic_linear,learned_uncertainty_conditioned_horizon_policy,0.14410715728830292,0.11161619221516222

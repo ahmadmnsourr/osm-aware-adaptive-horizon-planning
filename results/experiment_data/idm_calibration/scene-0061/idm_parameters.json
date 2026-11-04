@@ -1,0 +1,84 @@
+{
+  "scene_name": "scene-0061",
+  "calibration_timestamp_utc": "2026-05-23T18:34:44Z",
+  "parameter_source": "scene_conditioned_generic_calibration",
+  "parameter_notes": [
+    "Parameters were estimated from the refined scene using robust trajectory-statistic initialization followed by two-stage bounded local search.",
+    "This parameter set is intended to be shared by both the perception-only and OSM-aware planners.",
+    "IDM delta was kept fixed during calibration."
+  ],
+  "fitted_parameters": {
+    "v0_mps": 7.100791953124574,
+    "s0_m": 1.1453368153562458,
+    "T_s": 1.0004149610800204,
+    "a_max_mps2": 2.91261276361584,
+    "b_comfort_mps2": 2.0431860364829024,
+    "delta": 4.0
+  },
+  "fixed_parameters": {
+    "delta": 4.0
+  },
+  "bounds": {
+    "v0_mps": [
+      4.0,
+      15.0
+    ],
+    "s0_m": [
+      1.0,
+      8.0
+    ],
+    "T_s": [
+      0.8,
+      3.0
+    ],
+    "a_max_mps2": [
+      0.5,
+      3.5
+    ],
+    "b_comfort_mps2": [
+      0.5,
+      4.5
+    ],
+    "delta": [
+      4.0,
+      4.0
+    ]
+  },
+  "method": {
+    "stage_a": "scene-statistic initialization",
+    "stage_b1": "local random search around initialization",
+    "stage_b2": "local refinement around current best",
+    "num_random_samples": 3000,
+    "seed": 42
+  },
+  "fit_objective": {
+    "speed_rmse": 1.664662693138808,
+    "progress_rmse": 1.2331646288423472,
+    "accel_rmse": 1.5299675149431937,
+    "transition_speed_shape_rmse": 1.6161718627503223,
+    "stop_timing_error_frames": 0.0,
+    "restart_timing_error_frames": 0.0,
+    "objective_total": 3.4908701083319045,
+    "observed_stop_frame": 16,
+    "simulated_stop_frame": 16,
+    "observed_restart_frame": 23,
+    "simulated_restart_frame": 23,
+    "approach_frames_used": [
+      8,
+      17
+    ],
+    "crossing_frames_used": [
+      15,
+      25
+    ],
+    "accel_smoothing_window": 5,
+    "accel_residual_clip_mps2": 3.5
+  },
+  "virtual_gate": {
+    "gate_s_progress_m": 52.84373391130576,
+    "gate_source": "scene_summary.ego_hold_line_arc_length_m",
+    "ped_constraint_start_frame": 13,
+    "crossing_start_frame": 16,
+    "crossing_end_frame": 22
+  }
+}

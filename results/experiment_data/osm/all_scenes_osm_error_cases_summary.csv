@@ -1,0 +1,2 @@
+scene_name,status,num_cases,reference_source,clean_source,offset_method,output_csv,visualization_png,zoomed_visualization_png
+scene-0383,ok,13,scene_summary_refined_crossing,reference_fallback_no_osm_crossing,crossing_length_multipliers,data\osm\scene-0383\error_cases\osm_error_cases.csv,data\osm\scene-0383\error_cases\osm_error_cases_visualization.png,data\osm\scene-0383\error_cases\osm_error_cases_visualization_zoomed.png

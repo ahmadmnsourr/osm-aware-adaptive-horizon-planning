@@ -1,0 +1,36 @@
+{
+  "generated_at_utc": "2026-05-24T11:57:47Z",
+  "script": "08_generate_osm_error_cases_all_scenes.py",
+  "scenes": [
+    "scene-0383"
+  ],
+  "offset_method": "crossing_length_multipliers",
+  "error_multipliers_lambda": [
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5
+  ],
+  "offsets_m": [
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0
+  ],
+  "scene_results": [
+    {
+      "scene_name": "scene-0383",
+      "status": "ok",
+      "num_cases": 13,
+      "reference_source": "scene_summary_refined_crossing",
+      "clean_source": "reference_fallback_no_osm_crossing",
+      "offset_method": "crossing_length_multipliers",
+      "output_csv": "data\\osm\\scene-0383\\error_cases\\osm_error_cases.csv",
+      "visualization_png": "data\\osm\\scene-0383\\error_cases\\osm_error_cases_visualization.png",
+      "zoomed_visualization_png": "data\\osm\\scene-0383\\error_cases\\osm_error_cases_visualization_zoomed.png"
+    }
+  ]
+}

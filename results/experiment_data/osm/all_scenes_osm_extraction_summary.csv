@@ -1,0 +1,2 @@
+scene_name,success,output_dir,location,raw_osm_element_count,relevant_feature_count,query_error
+scene-0383,True,data\osm\scene-0383,singapore-onenorth,28,12,

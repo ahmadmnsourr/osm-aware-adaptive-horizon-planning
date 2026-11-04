@@ -1,0 +1,9 @@
+figure_type,scene_name,geometry_type,file,status,focus_mode_used,safety_metric_used,performance_metric_used,travel_time_metric_is_fixed_horizon,source_file,copied_file
+main_result_three_panel_heatmap,scene-1019,Straight approach,data\planner_comparison_paper\plots\main\01_scene-1019_straight_approach_horizon_safety_performance_heatmap.png,created,burst_dropout,min_ped_ttc_s,effective_travel_time_s,True,,
+main_result_three_panel_heatmap,scene-0061,Moderate-curvature approach,data\planner_comparison_paper\plots\main\02_scene-0061_moderate_curvature_horizon_safety_performance_heatmap.png,created,burst_dropout,min_ped_ttc_s,effective_travel_time_s,True,,
+main_result_three_panel_heatmap,scene-0383,High-curvature / circular approach,data\planner_comparison_paper\plots\main\03_scene-0383_high_curvature_circular_horizon_safety_performance_heatmap.png,created,burst_dropout,min_ped_ttc_s,effective_travel_time_s,False,,
+main_result_horizon_bar_points_across_geometries,all,all geometries,data\planner_comparison_paper\plots\main\05_horizon_bar_points_across_geometries.png,created,all modes,n/a,n/a,,,
+main_result_planner_robustness_by_degradation_seed_points,all,all geometries,data\planner_comparison_paper\plots\main\06_planner_robustness_by_degradation.png,created,all modes,min_ped_ttc_s,n/a,,,
+,scene-1019,Straight approach,,copied,,,,,data\osm\scene-1019\error_cases\osm_error_cases_visualization_zoomed.png,data\planner_comparison_paper\plots\osm_error_cases\01_straight_approach_osm_error_cases.png
+,scene-0061,Moderate-curvature approach,,copied,,,,,data\osm\scene-0061\error_cases\osm_error_cases_visualization_zoomed.png,data\planner_comparison_paper\plots\osm_error_cases\02_moderate_curvature_osm_error_cases.png
+,scene-0383,High-curvature / circular approach,,copied,,,,,data\osm\scene-0383\error_cases\osm_error_cases_visualization_zoomed.png,data\planner_comparison_paper\plots\osm_error_cases\03_high_curvature_circular_osm_error_cases.png

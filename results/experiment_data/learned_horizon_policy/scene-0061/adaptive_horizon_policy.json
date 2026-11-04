@@ -1,0 +1,113 @@
+{
+  "policy_type": "bounded_logistic_linear",
+  "policy_name": "learned_uncertainty_conditioned_horizon_policy",
+  "created_utc": "2026-05-24T12:34:28Z",
+  "scene_name": "scene-0061",
+  "geometry_learning_profile": {
+    "scene_name": "scene-0061",
+    "profile_used": true,
+    "geometry_case": "moderate_curvature_approach",
+    "rationale": "Reference moderate-curvature case; keep the balanced safety/efficiency weighting that already worked.",
+    "overrides": {
+      "safety_gain_ped_s": 0.95,
+      "conservatism_penalty_ped_s": 0.32,
+      "safety_gain_veh_s": 0.35,
+      "conservatism_penalty_veh_s": 0.18,
+      "ridge_lambda": 0.15
+    }
+  },
+  "training_source": "data\\planner_osm_aware_rulebased\\scene-0061\\per_run_metrics.csv",
+  "baseline_source_optional": "data\\planner_perception_only\\scene-0061\\per_run_metrics.csv",
+  "feature_names": [
+    "bias",
+    "degradation_fraction",
+    "normalized_osm_error",
+    "crossing_proximity_factor",
+    "actual_camera_drop_fraction",
+    "is_random_dropout",
+    "is_burst_dropout",
+    "is_distance_based_dropout",
+    "degradation_x_osm_error",
+    "degradation_x_proximity",
+    "osm_error_x_proximity",
+    "drop_fraction_x_proximity"
+  ],
+  "model_equation": "H_i = H_min_i + (H_max_i - H_min_i) * sigmoid(theta_i^T x)",
+  "feature_definition": {
+    "degradation_fraction": "degradation_level_pct / 100",
+    "normalized_osm_error": "OSM crosswalk positional error normalized by crossing length/bounds",
+    "crossing_proximity_factor": "mean ego proximity to crossing prior, 0 far and 1 near",
+    "actual_camera_drop_fraction": "observed degraded-camera drop fraction when available; otherwise degradation_fraction",
+    "mode_indicators": "one-hot indicators for random, burst, and distance-based dropout",
+    "interaction_terms": "products capturing joint map-perception-context uncertainty"
+  },
+  "target_generation": {
+    "description": "Outcome-guided targets are derived from closed-loop rollout metrics. Safety risk increases target horizon; conservatism/comfort/efficiency cost mildly decreases it.",
+    "safety_gain_ped_s": 0.95,
+    "conservatism_penalty_ped_s": 0.32,
+    "safety_gain_veh_s": 0.35,
+    "conservatism_penalty_veh_s": 0.18,
+    "critical_ttc_threshold_s": 1.5
+  },
+  "pedestrian": {
+    "horizon_min_s": 1.0,
+    "horizon_max_s": 5.0,
+    "theta": [
+      -0.6872337243740019,
+      1.0527007252326874,
+      1.2348800222598677,
+      0.35281822065798707,
+      -0.2999097876075665,
+      0.05410193834709379,
+      -0.026690978173058377,
+      -0.041155634644696806,
+      0.7889507628494951,
+      -0.8365334441081983,
+      1.9427948296062716,
+      0.6360154070441639
+    ],
+    "fit_metrics": {
+      "num_training_rows": 975,
+      "mae_s": 0.13776418524919026,
+      "rmse_s": 0.1743724137238495,
+      "r2": 0.9071384924820255,
+      "target_mean_s": 3.933430843749923,
+      "prediction_mean_s": 3.9602187535467164,
+      "target_min_s": 2.3946304043971023,
+      "target_max_s": 5.0
+    }
+  },
+  "vehicle": {
+    "horizon_min_s": 1.0,
+    "horizon_max_s": 2.8,
+    "theta": [
+      -0.8700493953295051,
+      1.3705858004595473,
+      0.8289255156169891,
+      0.8041732455608637,
+      0.04877630196798146,
+      -0.012643950818334155,
+      -0.005177712073289096,
+      0.0004206749957815052,
+      0.1784166388895958,
+      -0.5811280920682719,
+      0.14597742486461374,
+      -0.25449932711482715
+    ],
+    "fit_metrics": {
+      "num_training_rows": 975,
+      "mae_s": 0.0507485545843986,
+      "rmse_s": 0.06728828403188715,
+      "r2": 0.9043344756982744,
+      "target_mean_s": 2.134975351694605,
+      "prediction_mean_s": 2.1372893406288163,
+      "target_min_s": 1.5850305786463867,
+      "target_max_s": 2.632352556403681
+    }
+  },
+  "deployment_notes": [
+    "Place this JSON at data/learned_horizon_policy/<scene>/adaptive_horizon_policy.json.",
+    "Script 09 loads it automatically unless --disable-learned-horizon-policy is used.",
+    "If this file is absent, Script 09 falls back to the rule-based bounded linear horizon model."
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "planner_type": "perception_only_idm_batch_three_scenes",
+  "scenes_requested": [
+    "scene-1019",
+    "scene-0061",
+    "scene-0383"
+  ],
+  "scenes_completed": [
+    "scene-1019",
+    "scene-0061",
+    "scene-0383"
+  ],
+  "failures": [],
+  "degradation_modes": [
+    "random_dropout",
+    "burst_dropout",
+    "distance_based_dropout"
+  ],
+  "degradation_levels": [
+    10,
+    30,
+    50,
+    70,
+    90
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "per_scene_outputs_preserved": true,
+  "combined_outputs": {
+    "all_scenes_per_run_metrics_csv": "data\\planner_perception_only\\all_scenes_per_run_metrics.csv",
+    "all_scenes_aggregated_metrics_csv": "data\\planner_perception_only\\all_scenes_aggregated_metrics.csv"
+  },
+  "scene_summaries": [
+    {
+      "scene_name": "scene-1019",
+      "status": "completed",
+      "result_scene_dir": "data\\planner_perception_only\\scene-1019",
+      "num_runs": 75,
+      "idm_calibration_loaded": true,
+      "reference_crossing_for_pet_evaluation": {
+        "crossing_x": 575.365093448349,
+        "crossing_y": 2079.7595903047795,
+        "crossing_s_m": 67.16942106279218,
+        "crossing_length_m": 11.0,
+        "crossing_width_m": 6.5
+      }
+    },
+    {
+      "scene_name": "scene-0061",
+      "status": "completed",
+      "result_scene_dir": "data\\planner_perception_only\\scene-0061",
+      "num_runs": 75,
+      "idm_calibration_loaded": true,
+      "reference_crossing_for_pet_evaluation": {
+        "crossing_x": 397.1853086632334,
+        "crossing_y": 1123.0598472868774,
+        "crossing_s_m": 60.22749597204253,
+        "crossing_length_m": 8.767524121473546,
+        "crossing_width_m": 5.0
+      }
+    },
+    {
+      "scene_name": "scene-0383",
+      "status": "completed",
+      "result_scene_dir": "data\\planner_perception_only\\scene-0383",
+      "num_runs": 75,
+      "idm_calibration_loaded": true,
+      "reference_crossing_for_pet_evaluation": {
+        "crossing_x": 782.7775147699963,
+        "crossing_y": 1699.2872618138263,
+        "crossing_s_m": 32.55449888793049,
+        "crossing_length_m": 11.0,
+        "crossing_width_m": 6.8
+      }
+    }
+  ]
+}

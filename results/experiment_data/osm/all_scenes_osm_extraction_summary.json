@@ -1,0 +1,18 @@
+{
+  "generated_utc": "2026-05-24T11:59:14Z",
+  "script": "07_extract_osm_context_all_scenes.py",
+  "scenes_requested": [
+    "scene-0383"
+  ],
+  "batch_results": [
+    {
+      "scene_name": "scene-0383",
+      "success": true,
+      "output_dir": "data\\osm\\scene-0383",
+      "location": "singapore-onenorth",
+      "raw_osm_element_count": 28,
+      "relevant_feature_count": 12,
+      "query_error": null
+    }
+  ]
+}
