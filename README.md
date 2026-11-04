@@ -2,6 +2,8 @@
 
 **Planning with imperfect perception and imperfect map priors.** A research-oriented autonomous-driving pipeline that evaluates whether an **OpenStreetMap (OSM) crossing prior with explicit positional uncertainty** can improve pedestrian-crossing safety when camera-derived observations are degraded.
 
+**Research implementation:** Ahmad A. Mansour  
+
 **Focus:** autonomous driving · pedestrian safety · uncertainty-aware planning · OSM · nuScenes · Intelligent Driver Model (IDM) · adaptive prediction horizons
 
 **Research prototype.** This repository contains 26 Python scripts, the three selected-scene configurations, calibrated IDM parameter files, fitted adaptive-horizon policies, selected rollout tables and paired comparison results. The complete original nuScenes datasets and large trajectory-level outputs are **not** redistributed. The pipeline has **not** been independently rerun on another machine.
@@ -293,8 +295,8 @@ See [reproducibility notes](docs/REPRODUCIBILITY.md) for the input/output contra
 - **Safety–efficiency tradeoff:** longer horizons and earlier braking may improve TTC but increase stopping or traversal time.
 - **Reproduction requirements:** the original nuScenes data and complete intermediate trajectory-level products are not bundled; selected scene configurations, learned policy files and curated experiment tables are included.
 
-## Attribution
+## Project credit and data attribution
 
-Research materials supplied for this project list **Ahmad A. Mansour, Michel S. Khoueiry and Samer H. Hamdar** as authors. Authorship of the research write-up does not by itself assign individual programming contributions; source-code attribution and publication permissions should be confirmed before public release.
+**Research implementation and repository: Ahmad A. Mansour.**
 
 This project uses information from the **nuScenes** dataset and **OpenStreetMap**. Any redistributed derived data or maps must comply with the corresponding dataset and OSM attribution/licensing requirements. No blanket open-source license is assigned here.
