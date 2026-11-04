@@ -6,6 +6,22 @@
 
 **Research prototype.** This repository contains 26 Python scripts, the three selected-scene configurations, calibrated IDM parameter files, fitted adaptive-horizon policies, selected rollout tables and paired comparison results. The complete original nuScenes datasets and large trajectory-level outputs are **not** redistributed. The pipeline has **not** been independently rerun on another machine.
 
+## The research idea, visually
+
+<p align="center">
+  <a href="assets/overview/perception-vs-osm-aware-planning.png">
+    <img src="assets/overview/perception-vs-osm-aware-planning.png" width="100%" alt="Side-by-side research illustration contrasting the perception-only IDM approach with OSM-error-aware adaptive prediction horizons near a pedestrian crossing" />
+  </a>
+</p>
+
+*Conceptual comparison of the same ego-driving situation under two planning strategies. The two blue cars illustrate alternative methods, not two vehicles interacting with each other. Click the illustration to see it at full resolution.*
+
+**Left — perception only.** With degraded or missing camera detections, a planner relying only on visible pedestrians may react late. Its short anticipation horizon leaves a smaller safety margin near the crossing.
+
+**Right — OSM-error-aware adaptive horizon.** An OSM crossing prior provides earlier spatial context, allowing the planner to extend its prediction horizon and begin yielding sooner. The dashed crossing positions illustrate *signed map-location errors*: the crossing prior is useful but not assumed to be perfectly aligned with the actual crossing.
+
+**What the framework tests:** whether that extra anticipation improves pedestrian safety under perception dropout **without ignoring** the additional stopping, comfort and travel-time costs. These are controlled longitudinal-planning experiments, not a claim of on-road deployment.
+
 ## At a glance
 
 | Research component | Implementation |
@@ -96,21 +112,54 @@ The reported learned pedestrian prediction horizon increased from approximately 
 
 **Interpretation:** the results support the value of explicitly uncertainty-aware map priors in these controlled scenarios. They are **not** claims of on-road deployment readiness, proven safety certification or generalization across all crossing geometries. These values are traceable to the included experiment tables, not from a fresh rerun of the scripts on a separate machine. See [experiment artifacts](docs/EXPERIMENT_ARTIFACTS.md).
 
-### Geometry-specific results
+## Visual results and interpretation
 
-| Straight approach | Moderate-curvature approach | High-curvature approach |
-|---|---|---|
-| ![Straight geometry horizon and safety heatmap](results/figures/01_scene-1019_straight_approach_horizon_safety_performance_heatmap.png) | ![Moderate-curvature horizon and safety heatmap](results/figures/02_scene-0061_moderate_curvature_horizon_safety_performance_heatmap.png) | ![High-curvature horizon and safety heatmap](results/figures/03_scene-0383_high_curvature_circular_horizon_safety_performance_heatmap.png) |
+The following plots follow the experimental logic: **scene geometry → prediction-horizon adaptation → robustness to degraded detection → sensitivity to OSM crossing-position error**. Major result plots use a consistent full-width presentation, and all three map-error plots have equal-sized panels. Every image links to its full-resolution original.
 
-![Learned horizon by uncertainty level and geometry](results/figures/05_horizon_bar_points_across_geometries.png)
+### Horizon adaptation across the three approach geometries
 
-![Planner robustness under varying camera-degradation severity](results/figures/06_planner_robustness_by_degradation.png)
+The horizon/safety/performance heatmaps show how the method behaves across the tested combinations of perception degradation and crossing-prior uncertainty. Each scene is presented at the same width rather than shrinking three already-multi-panel heatmaps into one unreadable row.
 
-### OSM crossing-prior error cases
+**Straight approach — `scene-1019`**
 
-| Straight | Moderate curvature | High curvature |
-|---|---|---|
-| ![Signed OSM crossing-offset cases in straight approach](results/figures/01_straight_approach_osm_error_cases.png) | ![Signed OSM crossing-offset cases in moderate curvature](results/figures/02_moderate_curvature_osm_error_cases.png) | ![Signed OSM crossing-offset cases in high curvature](results/figures/03_high_curvature_circular_osm_error_cases.png) |
+<p align="center"><a href="results/figures/01_scene-1019_straight_approach_horizon_safety_performance_heatmap.png"><img src="results/figures/01_scene-1019_straight_approach_horizon_safety_performance_heatmap.png" width="880" alt="Straight-approach heatmaps showing adaptive horizon, pedestrian TTC and travel-time behavior" /></a></p>
+
+**Moderate curvature — `scene-0061`**
+
+<p align="center"><a href="results/figures/02_scene-0061_moderate_curvature_horizon_safety_performance_heatmap.png"><img src="results/figures/02_scene-0061_moderate_curvature_horizon_safety_performance_heatmap.png" width="880" alt="Moderate-curvature heatmaps showing adaptive horizon, pedestrian TTC and travel-time behavior" /></a></p>
+
+**High curvature / circular approach — `scene-0383`**
+
+<p align="center"><a href="results/figures/03_scene-0383_high_curvature_circular_horizon_safety_performance_heatmap.png"><img src="results/figures/03_scene-0383_high_curvature_circular_horizon_safety_performance_heatmap.png" width="880" alt="High-curvature heatmaps showing adaptive horizon, pedestrian TTC and travel-time behavior" /></a></p>
+
+The same experimental factors are considered across these geometries. The resulting behavior is geometry-dependent, which motivates evaluating more than one road shape instead of optimizing only for a straight approach.
+
+### How the learned horizon responds to uncertainty
+
+<p align="center"><a href="results/figures/05_horizon_bar_points_across_geometries.png"><img src="assets/readme-figures/horizon-adaptation-summary.png" width="880" alt="Comparison of pedestrian prediction horizon under low, medium and high uncertainty across three approach geometries" /></a></p>
+
+*Mean prediction-horizon duration for each geometry, with selected uncertainty-conditioned horizon values. The policy extends its horizon in higher-uncertainty conditions, though the magnitude differs by road geometry.*
+
+### Safety robustness as camera detections degrade
+
+<p align="center"><a href="results/figures/06_planner_robustness_by_degradation.png"><img src="assets/readme-figures/perception-degradation-robustness.png" width="880" alt="Perception-only IDM versus OSM-aware adaptive horizon minimum pedestrian TTC at progressively higher camera-degradation levels" /></a></p>
+
+*Minimum pedestrian TTC versus camera degradation (10–90%) across the three geometries. The comparison shows the safety-margin advantage observed for the OSM-aware method in these controlled tests; variability bands reflect the archived evaluation rather than independent new runs.*
+
+### Where imperfect OSM crossing priors are tested
+
+The OSM prior itself may be misaligned. These route-aligned plots visualize the true crossing and deliberately shifted OSM crossing hypotheses used to test sensitivity to map errors. They are shown as three **equal-sized image panels**; open any panel to inspect the full-resolution axes and annotations.
+
+<table>
+  <thead><tr><th width="33%">Straight</th><th width="33%">Moderate curvature</th><th width="33%">High curvature</th></tr></thead>
+  <tbody><tr>
+    <td align="center"><a href="results/figures/01_straight_approach_osm_error_cases.png"><img src="results/figures/01_straight_approach_osm_error_cases.png" width="100%" alt="Straight-approach route with perturbed crossing positions" /></a></td>
+    <td align="center"><a href="results/figures/02_moderate_curvature_osm_error_cases.png"><img src="results/figures/02_moderate_curvature_osm_error_cases.png" width="100%" alt="Moderately curved route with perturbed crossing positions" /></a></td>
+    <td align="center"><a href="results/figures/03_high_curvature_circular_osm_error_cases.png"><img src="results/figures/03_high_curvature_circular_osm_error_cases.png" width="100%" alt="High-curvature route with perturbed crossing positions" /></a></td>
+  </tr></tbody>
+</table>
+
+OSM positional uncertainty is part of the experiment design, not treated as ground truth. Comparison tables under [`results/experiment_data/planner_comparison/tables/`](results/experiment_data/planner_comparison/tables/) record how the planners responded to these paired perturbations.
 
 ## Inspectable experiment records
 
@@ -148,8 +197,11 @@ osm-aware-adaptive-horizon-planning/
 │   ├── ...                      # Additional single-scene and utility variants
 │   ├── config/                 # Scene configurations (paths sanitized)
 │   └── data/                   # Local generated outputs (ignored by Git)
+├── assets/
+│   ├── overview/              # Original two-strategy crossing illustration
+│   └── readme-figures/        # Consistent-size preview canvases
 ├── results/
-│   ├── figures/               # Summary research plots
+│   ├── figures/               # Unmodified, full-resolution research figures
 │   └── experiment_data/       # Selected paired metrics and fitted policies
 ├── docs/
 │   └── REPRODUCIBILITY.md
