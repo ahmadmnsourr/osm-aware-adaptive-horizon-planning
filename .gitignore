@@ -1,0 +1,101 @@
+
+# OSM-Aware Adaptive-Horizon Planning
+# Python Research Repository
+
+# ==========================================
+# Python environments
+# ==========================================
+.venv/
+.venv_*/
+venv/
+env/
+ENV/
+.nuscenes_env/
+
+# ==========================================
+# Python cache and build files
+# ==========================================
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# ==========================================
+# IDE and editor settings
+# ==========================================
+.vscode/
+.idea/
+*.code-workspace
+*~
+*.swp
+*.swo
+
+# ==========================================
+# Original nuScenes datasets
+# ==========================================
+v1.0-mini/
+v1.0-trainval/
+samples/
+sweeps/
+maps/
+can_bus/
+
+# ==========================================
+# Large local datasets and caches
+# ==========================================
+data/
+!data/
+data/*
+!data/README.md
+
+.cache/
+.cache_*/
+cache/
+tmp/
+temp/
+
+# ==========================================
+# Temporary experiment outputs
+# ==========================================
+runs/
+logs/
+wandb/
+tensorboard/
+checkpoints/
+*.log
+*.tmp
+*.bak
+
+# ==========================================
+# Local configuration and credentials
+# ==========================================
+.env
+.env.*
+!.env.example
+secrets.json
+credentials.json
+
+# ==========================================
+# Operating system files
+# ==========================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ==========================================
+# Curated research assets are preserved
+# ==========================================
+
+# src/                    Python research scripts
+# config/                 Scene and planner configurations
+# results/experiment_data/ Curated evaluation outputs
+# results/figures/        Research figures
+# assets/                 README visuals
+# docs/                   Research documentation
+# requirements.txt        Python dependencies
+# README.md               Project overview
